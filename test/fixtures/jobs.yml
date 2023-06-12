@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  job_title: MyString
+  description: MyText
+  company_name: MyString
+  job_requirement: MyString
+  salary: 1
+  job_location: MyString
+  working_hour: 2023-06-12 19:02:28
+  last_date: 2023-06-12
+
+two:
+  job_title: MyString
+  description: MyText
+  company_name: MyString
+  job_requirement: MyString
+  salary: 1
+  job_location: MyString
+  working_hour: 2023-06-12 19:02:28
+  last_date: 2023-06-12
