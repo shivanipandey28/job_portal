@@ -1,0 +1,13 @@
+<h1> Available jobs are here you can apply <h1>
+<ul>
+  <% @jobs.each do |job| %>
+    <li>
+     <%= link_to job.job_title,job %>
+   </li>
+   <ul>
+  
+</li>
+   </li>
+ <% end %>
+ <li><%= link_to "New Job Post ", new_job_path(@job)%>
+</ul>
