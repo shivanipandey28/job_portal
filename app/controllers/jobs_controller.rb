@@ -20,6 +20,12 @@ class JobsController < ApplicationController
     end
   end
 
+  def destroy
+    @job = Job.find(params[:id])
+    @job.destroy
+    redirect_to root_path, status: :see_other
+  end
+
   private
   def job_params
     params.require(:job).permit(:job_title, :description,:company_name, :job_location, :job_requirement, :salary, :working_hour, :last_date)

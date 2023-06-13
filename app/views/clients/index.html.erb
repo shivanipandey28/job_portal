@@ -1,0 +1,12 @@
+<h1>  this is client <h1>
+<ul>
+ <% @clients.each do |client| %>
+  <li>
+    <%= link_to client.name,client %>
+  </li>
+ <% end %>
+ <h6> you can post your jobs here<h6>
+ <li><%= link_to "New Job Post ", new_job_path %></li>
+ </ul>
+
+  

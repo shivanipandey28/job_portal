@@ -1,4 +1,9 @@
   Rails.application.routes.draw do
-  resources :jobs
-  root "jobs#index"
+    devise_for :users
+  resources :jobs do
+    resources :clients
+  end
+  #root "jobs#index"
+  root "clients#index"
+
 end
