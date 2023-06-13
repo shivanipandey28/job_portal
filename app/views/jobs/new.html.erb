@@ -24,6 +24,45 @@
   </div>
 
   <div>
+    <%= form.label :job_requirement%><br>
+    <%= form.text_area :job_requirement %><br>
+    <% @job.errors.full_messages_for(:job_requirement).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :salary%><br>
+    <%= form.text_area :salary %><br>
+    <% @job.errors.full_messages_for(:salary).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :job_location%><br>
+    <%= form.text_area :job_location %><br>
+    <% @job.errors.full_messages_for(:job_location).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :working_hour%><br>
+    <%= form.text_area :working_hour %><br>
+    <% @job.errors.full_messages_for(:working_hour).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :last_date%><br>
+    <%= form.text_area :last_date %><br>
+    <% @job.errors.full_messages_for(:last_date).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+  <div>
     <%= form.submit %>
   </div>
 <% end %>
