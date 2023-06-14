@@ -1,8 +1,10 @@
 class ClientsController < ApplicationController
   before_action :authenticate_user!
+  
   def index
     @clients = Client.all
   end
+
   def show
     @client = Client.find(params[:id])
   end
@@ -10,13 +12,13 @@ class ClientsController < ApplicationController
   def new 
     @client = Client.new
   end
-
+  
   def create
-    @client = Client.find(params[:id])
-    if @job.save
-      redirect_to client_path(@client), notice: 'Job created successfully.'
+    @client = Client.new(client_params)
+    if @client.save
+      redirect_to @client, notice: 'Profile created succesfully'
     else
-      render :new
+      render :new, status: :unprocessable_entity 
     end
   end
 

@@ -1,32 +1,32 @@
-%= form_with model: @client do |form| %>
+<%= form_with model: @client do |form| %>
   <div>
     <%= form.label :name %><br>
     <%= form.text_field :name %>
-    <% @job.errors.full_messages_for(:name).each do |message| %>
+    <% @client.errors.full_messages_for(:name).each do |message| %>
       <div><%= message %></div>
     <% end %>
   </div>
 
   <div>
     <%= form.label :company_name%><br>
-    <%= form.text_area :company_name %><br>
-    <% @job.errors.full_messages_for(:company_name).each do |message| %>
+    <%= form.text_area :company_name %>
+    <% @client.errors.full_messages_for(:company_name).each do |message| %>
       <div><%= message %></div>
     <% end %>
   </div>
 
   <div>
-    <%= form.label :contact_no%><br>
-    <%= form.text_area :contact_no %><br>
-    <% @job.errors.full_messages_for(:contact_no).each do |message| %>
+    <%= form.label :contact_no %><br>
+    <%= form.text_area :contact_no %>
+    <% @client.errors.full_messages_for(:contact_no).each do |message| %>
       <div><%= message %></div>
     <% end %>
   </div>
 
   <div>
-    <%= form.label :email%><br>
-    <%= form.text_area :email %><br>
-    <% @job.errors.full_messages_for(:email).each do |message| %>
+    <%= form.label :email %><br>
+    <%= form.text_area :email %>
+    <% @client.errors.full_messages_for(:email).each do |message| %>
       <div><%= message %></div>
     <% end %>
   </div>
@@ -34,4 +34,5 @@
   <div>
     <%= form.submit"Create Job" %>
   </div>
-<% end %>
+  <% end %>
+
