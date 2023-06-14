@@ -1,12 +1,11 @@
-<h1>  this is client <h1>
+<h1> Client List  <h1>
 <ul>
  <% @clients.each do |client| %>
   <li>
-    <%= link_to client.name,client %>
-  </li>
+    <%= link_to client.name,job_client_path,client %>
+ </li>
  <% end %>
- <h6> you can post your jobs here<h6>
- <li><%= link_to "New Job Post ", new_job_path %></li>
- </ul>
+ <%= link_to "Create New Client",new_job_client_path(@client) %>         
+</ul>
 
   
