@@ -2,10 +2,10 @@
 <ul>
  <% @clients.each do |client| %>
   <li>
-    <%= link_to client.name,job_client_path,client %>
+    <%= link_to client.name,client %>
  </li>
  <% end %>
- <%= link_to "Create New Client",new_job_client_path(@client) %>         
+ <%= link_to "Create New Client",new_client_path %>         
 </ul>
 
   
