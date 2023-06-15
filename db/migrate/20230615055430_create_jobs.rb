@@ -10,7 +10,6 @@ class CreateJobs < ActiveRecord::Migration[7.0]
       t.time :working_hour
       t.date :last_date
       t.references :client, null: false, foreign_key: true
-
       t.timestamps
     end
   end
