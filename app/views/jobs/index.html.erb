@@ -4,14 +4,14 @@
 <% else %>
   <%= button_to "Sign in", new_user_session_path %> 
 <% end %>
-<h1>  All Job list  <h1>
+<h1>  All Job list are here <h1>
 <ul>
-  <% @jobs.each do |job| %>
-    <li>
-      <%= link_to job.job_title,job %>
-      <p><%= job.short_description(3) %></p> 
-    </li>
-  <% end %>
+ <% @jobs.each do |job| %>
+  <li>
+    <%= link_to job.job_title, job%>
+    <p><%= job.short_description(3) %></p>
+</li>
+<% end %>
  <h6> you can post your jobs here<h6>
  <li><%= link_to "New Job Post ", new_job_path(@job)%></li>
  </ul>
